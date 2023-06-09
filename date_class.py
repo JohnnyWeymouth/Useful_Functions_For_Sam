@@ -25,7 +25,6 @@ def get_cleanedDate_and_numFields(date:str):
 
     # If Parsing failed, the date needs heavy cleanup.
     except:
-        print("got to here")
         # filter out strings that are not months of the year or ints
         months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec",]
         date = re.sub(r'[^\w\s]', '', date) # Gets rid of not letters or numbers

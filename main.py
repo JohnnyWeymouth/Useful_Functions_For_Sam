@@ -13,8 +13,17 @@ location1 = CleanLocation(location1)
 location2 = CleanLocation(location2)
 results = CompareLocations(location1, location2)
 print(results)
-print("", end="\n\n\n")
+print("This comparison required a geopy api call")
+print("-------------")
 
+location1 = "moorpark, ventura, california" 
+location2 = "moorpark, california"
+location1 = CleanLocation(location1)
+location2 = CleanLocation(location2)
+results = CompareLocations(location1, location2)
+print(results)
+print("This comparison did not, as there were enough token word matches")
+print("", end="\n\n\n")
 
 
 
