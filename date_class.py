@@ -31,7 +31,6 @@ def get_cleanedDate_and_numFields(date:str):
         date = re.sub(r'(?<=[a-zA-Z])(?=\d)|(?<=\d)(?=[a-zA-Z])', ' ', date) # Adds spaces when letters and numbers are next to each other
         date = re.sub(r'(' + '|'.join(months) + r')', r' \1 ', date, flags=re.IGNORECASE) #Adds space between words and their substrings if the substrings are months
         date = re.sub(r"\b(?!\d|\b" + "|".join(months) + r"\b)\w+\b", "", date, flags=re.IGNORECASE)
-        print(f"date became {date}")
 
         # Tries again after the cleanup
         try:
